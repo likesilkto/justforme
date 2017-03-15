@@ -1,0 +1,129 @@
+<h1><a href=".">Memo just for me</a></h1>
+<h1>My minimal usage for personal git</h1>
+<hr>
+<h2>Version</h2>
+<p>Version-<strong>A.a.1</strong></p>
+<p><strong>A</strong>: Major version</p>
+<p><strong>a</strong>: Minor Version (Increased added some functionality)</p>
+<p><strong>1</strong>: Bug fix, code refine</p>
+<h2>Branch name</h2>
+<p><strong>dev_A.a.1</strong> is development branch for version A.a.1</p>
+<p><strong>dev_A.a.1_<purpose></strong> is branch for development of <purpose>.</p>
+<p><strong>dev_A.a.1_<purpose></strong> is merged to <strong>dev_A.a.1</strong> when finished developement.</p>
+<p>Commit comment in <strong>dev_A.a.1_<purpose></strong> is as you want.</p>
+<p>Commit comment in <strong>dev_A.a.1</strong> is version.</p>
+<hr>
+<h2>Development flow</h2>
+<ol>
+<li>
+<p>Clone repository from the remote repository</p>
+</li>
+<li>
+<p>Create branch in local repository</p>
+</li>
+<li>
+<p>Develop the created branch in local repository</p>
+</li>
+<li>
+<p>Merge the developed branch in local repository</p>
+</li>
+<li>
+<p>Push the merged to the remote repository</p>
+</li>
+</ol>
+<h3>Commands</h3>
+<h4>Clone repository from the remote repository</h4>
+<p><code>% git clone &lt;url&gt;</code></p>
+<h4>Create branch in local repository</h4>
+<p><code>% git branch &lt;branch_name&gt;</code></p>
+<p><code>% git checkout &lt;branch_name&gt;</code></p>
+<p>or</p>
+<p><code>% git checkout -b &lt;branch_name&gt;</code></p>
+<h4>Develop the created branch in local repository</h4>
+<h5>When you create new files</h5>
+<p><code>% git add &lt;new\_files&gt;</code></p>
+<h5>Commit in development branch</h5>
+<p><code>% git commit -a -m 'commit messeage'</code></p>
+<h4>Merge the developed branch in local repository</h4>
+<p><code>% git branch master</code></p>
+<p><code>% git merge &lt;branch_name&gt;</code></p>
+<h4>Push the merged to the remote repository</h4>
+<p><code>% git push origin master</code></p>
+<hr>
+<h2>Useful commands</h2>
+<h5>Show newly indexed (added) files</h5>
+<p><code>% git diff --cached --name-only</code></p>
+<h5>Remove files from indexed</h5>
+<p><code>% git rm --cached &lt;filename&gt;</code></p>
+<p>If you put forget '--cached', actual file is also removed.</p>
+<h5>Add files to index at first</h5>
+<p><code>% git add &lt;filename&gt;</code></p>
+<h5>Show differences between working and index</h5>
+<p><code>% git diff</code></p>
+<h5>Show files modified</h5>
+<p><code>% git diff --name-only</code></p>
+<p>##### Commit all modified files in local<br>
+<code>% git commit -a -m 'commitment comment'</code></p>
+<p>The option '-a' automatically commit all modified files. But, new files before indexed (added) are not committed. First, you should add new files before commit.</p>
+<h5>Cancel the commit</h5>
+<p><code>% git reset --soft &lt;commit id&gt;</code></p>
+<p>Return (reset) to <commit id>, while workflow files will not be changed.</p>
+<h5>Discard the commit</h5>
+<p><code>% git reset --hard &lt;commit id&gt;</code></p>
+<p>Return (reset) to <commit id>. Workflow files will also return at <commit id></p>
+<h5>Show commit id and message history</h5>
+<p><code>% git log --oneline</code></p>
+<h5>Show commit graphically</h5>
+<p><code>% git log --graph</code></p>
+<h5>Show branch list</h5>
+<p><code>% git branch</code></p>
+<h5>Create branch</h5>
+<p><code>% git branch &lt;branch_name&gt;</code></p>
+<h5>Change branch</h5>
+<p><code>% git checkout &lt;branch_name&gt;</code></p>
+<h5>Delete branch</h5>
+<p><code>% git branch -d &lt;branch_name&gt;</code></p>
+<h5>Merge branch</h5>
+<p><code>% git merge --no--ff &lt;branch_name&gt;</code></p>
+<p>Merge commit of <branch_name> to current branch.</p>
+<h5>Commit to the remote repository</h5>
+<p><code>% git push origin master</code></p>
+<p><em>origin</em> is just alias of the server name.</p>
+<p><em>master</em> is branch name. You can specify different branch name.</p>
+<h5>Update the latest commit from the remote repository</h5>
+<p><code>% git pull</code></p>
+<h5>Pull from local repository</h5>
+<p><code>% git pull . &lt;branch&gt;</code></p>
+<p>or</p>
+<p><code>% git merge &lt;branch&gt;</code></p>
+<hr>
+<h2>Configurations</h2>
+<h5>Show configuration list</h5>
+<p><code>% git config --list</code></p>
+<h5>Set cat for pager</h5>
+<p><code>% git config --global core.pager cat</code></p>
+<h5>merge withoug fast-forward (I like it!)</h5>
+<p><code>git config --global --add merge.ff false</code></p>
+<p>But, pull fast-forward</p>
+<p><code>git config --global --add pull.ff only</code></p>
+<h5>Set name globally</h5>
+<p><code>% git config --global user.name 'Masayuki Tanaka'</code></p>
+<h5>Set email locally (for each project)</h5>
+<p><code>% git config --local user.email 'mail@address'</code></p>
+<hr>
+<h2>References</h2>
+<p><a href="http://d.hatena.ne.jp/mumoshu/20090408/1239202846">http://d.hatena.ne.jp/mumoshu/20090408/1239202846</a></p>
+<p><a href="http://qiita.com/2m1tsu3/items/6d49374230afab251337">http://qiita.com/2m1tsu3/items/6d49374230afab251337</a></p>
+<p><a href="http://d.hatena.ne.jp/mrgoofy33/20100910/1284069468">http://d.hatena.ne.jp/mrgoofy33/20100910/1284069468</a></p>
+<p><a href="http://dqn.sakusakutto.jp/2011/10/git_push_origin_master.html">http://dqn.sakusakutto.jp/2011/10/git_push_origin_master.html</a></p>
+<p><a href="http://www.backlog.jp/git-guide/stepup/stepup2_5.html">http://www.backlog.jp/git-guide/stepup/stepup2_5.html</a></p>
+<p><a href="http://qiita.com/shyamahira/items/59ff8aa1cf7b893aab60">http://qiita.com/shyamahira/items/59ff8aa1cf7b893aab60</a></p>
+<p><a href="http://stackoverflow.com/questions/5613902/how-to-pull-from-a-local-branch-into-another-one">http://stackoverflow.com/questions/5613902/how-to-pull-from-a-local-branch-into-another-one</a></p>
+<p><a href="http://qiita.com/nog/items/c79469afbf3e632f10a1">http://qiita.com/nog/items/c79469afbf3e632f10a1</a></p>
+<hr>
+<h2>Links</h2>
+<p><a href=".">Memo just for me</a></p>
+<p><a href="http://www.ok.sc.e.titech.ac.jp/~mtanaka/">My official page</a></p>
+<p><a href="http://github.com/mastnk/">My official github</a></p>
+<p><a href="http://like.silk.to/">My hobby page</a></p>
+<p><a href="http://github.com/likesilkto/">My hobby github</a></p>

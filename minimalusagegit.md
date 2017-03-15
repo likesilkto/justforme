@@ -1,7 +1,4 @@
-My minimal usage for personal git
-===
-
-Just for me
+# My minimal usage for personal git
 
 ---
 
@@ -17,15 +14,15 @@ Version-**A.a.1**
 
 ## Branch name
 
-**dev_A.a.1** is development branch for version A.a.1
+**dev\_A.a.1** is development branch for version A.a.1
 
-**dev_A.a.1_<purpose>** is branch for development of <purpose>.
+**dev\_A.a.1\_<purpose>** is branch for development of <purpose>.
 
-**dev_A.a.1_<purpose>** is merged to **dev_A.a.1** with comment '<purpose>' when finished developement.
+**dev\_A.a.1\_<purpose>** is merged to **dev\_A.a.1** when finished developement.
 
-Commit comment in **dev_A.a.1_<purpose>** is as you want.
+Commit comment in **dev\_A.a.1\_<purpose>** is as you want.
 
-Commit comment in **dev_A.a.1** is version.
+Commit comment in **dev\_A.a.1** is version.
 
 ---
 
@@ -61,7 +58,7 @@ Commit comment in **dev_A.a.1** is version.
 
 ##### When you create new files
 
-  ```% git add <new_files>```
+  ```% git add <new\_files>```
 
 ##### Commit in development branch
 
@@ -167,9 +164,9 @@ Commit comment in **dev_A.a.1** is version.
 ##### Pull from local repository
 
   ```% git pull . <branch>```
-  
+
   or
-  
+
   ```% git merge <branch>```
 
 ---
@@ -189,7 +186,7 @@ Commit comment in **dev_A.a.1** is version.
    ```git config --global --add merge.ff false```
 
    But, pull fast-forward
-   
+
    ```git config --global --add pull.ff only```
 
 
@@ -220,15 +217,3 @@ http://qiita.com/shyamahira/items/59ff8aa1cf7b893aab60
 http://stackoverflow.com/questions/5613902/how-to-pull-from-a-local-branch-into-another-one
 
 http://qiita.com/nog/items/c79469afbf3e632f10a1
-
----
-
-## Links
-
-[My official page](http://www.ok.sc.e.titech.ac.jp/~mtanaka/)
-
-[My official github](http://github.com/mastnk/)
-
-[My hobby page](http://like.silk.to/)
-
-[My hobby github](http://github.com/likesilkto/)
