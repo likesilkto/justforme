@@ -1,0 +1,17 @@
+
+body {
+background-color: #ffffff;
+color: #003366;
+
+}
+
+a{
+color:#00B0F0;
+text-decoration:none;
+
+}
+
+a:hover{
+color:#FF0066;
+text-decoration:none;
+}
